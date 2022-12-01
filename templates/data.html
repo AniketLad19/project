@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+   body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   }
+   * {
+      box-sizing: border-box;
+   }
+   .card {
+      color: white;
+      float: left;
+      width: calc(25% - 20px);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 10px;
+      height: 400px;
+   }
+   .card p {
+      font-size: 18px;
+   }
+   .cardContainer:after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+   @media screen and (max-width: 600px) {
+      .card {
+         width: 100%;
+      }
+   }
+</style>
+</head>
+<body>
+    {% for i in i %}
+<div class="cardContainer">
+<div class="card" style="background-color:rgb(153, 29, 224);">
+<h2>{{i[0]}}</h2>
+<p>{{i[1]}},{{i[2]}}</p>
+<img src="" alt="">
+<h1></h1>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" style="background-color: red;" class="btn btn-secondary">More Information</button>
+    <button type="button" style="background-color: green;" class="btn btn-secondary">Visit</button>
+    <a href="https://www.google.com/maps/place/{{i[3]}}"><button type="button" style="background-color: blue;" class="btn btn-secondary">See Location</button></a>
+  </div>
+</div>
+{% endfor %}
+
+
+</div>
+</body>
+</html>
